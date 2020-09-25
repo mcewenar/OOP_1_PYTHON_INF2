@@ -103,10 +103,16 @@ def main(): #En programas con múltiples funciones es necesario indicar la funci
             c = int(input("Enter ID: "));
             p = sys.seeDate_patients(c);
             #2. If you find patient, print dates
-            print("Name: " + p.seeName());
-            print("Id: " + str(p.seeId()));
-            print("Gender: " + p.seeGen());
-            print("Service: " + p.seeServi());
+            if  p != None:
+
+                print("Name: " + p.seeName());
+                print("Id: " + str(p.seeId()));
+                print("Gender: " + p.seeGen());
+                print("Service: " + p.seeServi());
+            else:
+                print("Patient not found");
+            
+
 
         elif option == 3:
             print("Now there are " + str(sys.seeNum_patients()) + " patients");
